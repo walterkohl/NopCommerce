@@ -1,0 +1,5 @@
+﻿{
+  "DataConnectionString": "Data Source=WJK-HP-DESKTOP1\\SQLEXPRESS;Initial Catalog=catDB;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=wjk-2377",
+  "DataProvider": "sqlserver",
+  "RawDataSettings": {}
+}

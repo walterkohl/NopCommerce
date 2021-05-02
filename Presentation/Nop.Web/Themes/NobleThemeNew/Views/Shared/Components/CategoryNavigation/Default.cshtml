@@ -1,0 +1,26 @@
+﻿@model CategoryNavigationModel
+
+@if (Model.Categories.Count > 0)
+{
+<div class="block block-category-navigation well box-shadow-wrapper">
+    <div class="wjksubtitle main-title">
+        <span class="glyphicon glyphicon-home"></span>&nbsp;
+        <a href="~/">
+            <strong>@T("Categories")</strong>
+        </a>
+    </div>
+    <div class="wjklistbox">
+
+        @foreach (var category in Model.Categories)
+        {
+            var categoryLineModel = new CategoryNavigationModel.CategoryLineModel
+            {
+                CurrentCategoryId = Model.CurrentCategoryId,
+                Category = category
+            };
+            @await Html.PartialAsync("_CategoryLine.Navigation", categoryLineModel)
+        }
+
+    </div>
+</div>
+}
